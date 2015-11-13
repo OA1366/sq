@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>addAuthor</title>
+</head>
+<body>
+    <form action="/addAuthor/" method="post">
+    <table border=1 align="center" >
+         <tr>
+          <p align="center" style="color: red">The author not exit,please add one</p>
+         </tr>
+         <tr>
+          <th>Name</th><th>Age</th><th>Country</th>
+         </tr>
+            <tr>
+                <td><input type="text" name="name"></td>
+                <td><input type="text" name="age"></td>
+                <td><input type="text" name="country"></td>
+            </tr>
+            <table border=1 align="center" style="color: green">
+            <tr>
+                <th><input type="hidden" name="id" value="{{ ID }}"/><input type="submit" value="Add"></th>
+            </tr>
+            </table>
+    </table>
+    </form>
+    <p align="center" style="color: blank"><a id="k1" href="/home/">return home</a></p>
+</body>
+</html>

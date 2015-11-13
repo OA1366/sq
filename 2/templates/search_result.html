@@ -1,0 +1,15 @@
+<html><head><title>Books</title></head>
+<table border=1 align="center" style="color: green">
+ <tr>
+  <th>Title</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+ </tr>
+{% for book in books %}
+ <tr>
+  <td>{{ book.Title }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+ </tr>
+{% endfor %}
+</table>
+</html>

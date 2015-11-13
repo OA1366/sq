@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Search</title>
+</head>
+<body>
+    {% if error %}
+        <p style = "color: red;">Please submit a search term.</p>
+    {% else %}
+        <table border=1 align="center" >
+             <tr>
+              <th>Title</th>
+             </tr>
+            {% for book in books %}
+             <tr>
+              <td><p><a id="k1" href="/find/?id={{ book.id }}">{{ book.Title }}</a></p></td>
+             </tr>
+            {% endfor %}
+            </table>
+    {% endif %}
+    <form action="/search/" method="get">
+        <p align="center">Input a author name<input type="text" name="q">
+        <input type="submit" value="Search"></p>
+    </form>
+    <p align="center" style="color: blank"><a id="k1" href="/home/">return home</a></p>
+</body>
+</html>

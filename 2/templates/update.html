@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Books</title>
+</head>
+<body>
+    <form action="/update/" method="post">
+    <table border=1 align="center" style="color: green">
+         <tr>
+          <th>Title</th><th>Author</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+         </tr>
+            <tr>
+                <td>{{ book.Title }}</td>
+                <td>{{ book.AuthorID.Name }}</td>
+                <td>{{ book.Publisher }}</td>
+                <td>{{ book.PublishDate }}</td>
+                <td>{{ book.Price }}</td> 
+            </tr>
+            <tr>
+                <td><input type="text" name="title"></td>
+                <td><input type="text" name="name"></td>
+                <td><input type="text" name="publisher"></td>
+                <td><input type="date" name="publishdate"></td>
+                <td><input type="text" name="price"></td>
+            </tr>
+            <table border=1 align="center" style="color: green">
+            <tr>
+                <th>
+                <form action="" method="get">
+                <input type="hidden" name="id" value="{{ book.id }}"><input type="submit" value="Update">
+                </from>
+                </th>
+            </tr>
+            </table>
+    </table>
+    </form>
+    <p align="center" style="color: blank"><a id="k1" href="/home/">return home</a></p>
+</body>
+</html>

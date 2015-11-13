@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+    <table border=2 align="center" >
+         <tr>
+          <th>Title</th><th>Author</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>Operate</th>
+         </tr>
+        {% for book in books %}
+         <tr>
+          <td>{{ book.Title }}</td>
+          <td>{{ book.AuthorID.Name}}</td>
+          <td>{{ book.Publisher }}</td>
+          <td>{{ book.PublishDate }}</td>
+          <td>{{ book.Price }}</td>
+          <td><form action="/show/" method="get">
+                <a id="k1" href="/show/?id={{ book.id }}&sq=Update">Update</a>
+                <a id="k1" href="/show/?id={{ book.id }}&sq=Delete">Delete</a>
+          </from></td>
+         </tr>
+        {% endfor %}
+        </table>
+
+    <table border=1 align="center" >
+         <tr>
+          <th>Name</th><th>Age</th><th>Country</th><th>Operate</th>
+         </tr>
+        {% for author in authors %}
+         <tr>
+          <td>{{ author.Name }}</td>
+          <td>{{ author.Age}}</td>
+          <td>{{ author.Country }}</td>
+          <td><form action="/delauthor/" method="get">
+                <a id="k1" href="/delauthor/?id={{ author.id }}&sq=Delete">Delete</a>
+          </from></td>
+         </tr>
+        {% endfor %}
+    </table>
+    <p align="center" style="color: blank">First:<a id="k1" href="/search/">search books by author name</a></p>
+    <p align="center" style="color: blank">Second:<a id="k1" href="/addbook/">add a book</a></p>
+    <p align="center" style="color: blank">Third:<a id="k1" href="/home/">return home</a></p>
+</body>
+</html>
